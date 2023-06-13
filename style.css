@@ -1,0 +1,294 @@
+:root {
+    --transparent: rgba(0, 0, 0, 0.39);
+    --dark: rgba(0, 0, 0, 0.808);
+    --redBuys: #D2003C;
+    --greenWhatsapp: rgb(8, 145, 8);
+    --transparent1: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+
+/* BACKGROUNND IMAGE AND COLOR */
+.background--img,
+.background--color {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+
+.background--img {
+    object-fit: cover;
+    z-index: -2;
+}
+
+.background--color {
+    background: var(--transparent);
+    z-index: -1;
+}
+
+
+
+/* COURSE NAME AND IMAGE-PERFILE AND DESCRIPTION---------------1*/
+.container,
+.perfil,
+.perfil__description .perfil__head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.144);
+    z-index: 1;
+    flex-wrap: wrap;
+    color: white;
+
+}
+
+.perfil {
+    width: 100%;
+}
+
+.perfil .perfil__description {
+    width: 90%;
+}
+
+/* IMG PERFIL----------*/
+.perfil__description .perfil__image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.perfil__description .perfil__head {
+    color: white;
+    font-size: 20px;
+    font-family: 'Pathway Extreme', sans-serif;
+    margin-bottom: 20px;
+}
+
+.perfil__description .perfil__paragraph {
+    width: 100%;
+    line-height: 20px;
+    text-align: justify;
+    font-size: 15px;
+    color: white;
+    padding: 20px 15px;
+    border-radius: 5px;
+    background: var(--transparent);
+}
+
+
+/* SECTION-2 COURSES--------------------------2*/
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+    width: 100%;
+}
+
+.courses .interest {
+    font-size: 20px;
+    font-family: sans-serif;
+    margin: 15px 0 5px 0;
+}
+
+.courses .course-0 {
+    width: 90%;
+    height: 70px;
+    color: white;
+    font-family: 'Red Hat Text', sans-serif;
+    background: var(--transparent);
+    border-radius: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.course-0 img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+
+
+
+/* PRESENTATION COURSE */
+.background_presentation {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.63);
+    position: fixed;
+    z-index: 2;
+    display: none;
+
+}
+
+.details {
+    width: 90%;
+    height: 650px;
+    font-family: 'Roboto', sans-serif;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    z-index: 3;
+}
+
+/* VIDEO OF THE COURSE */
+.details .details__video,
+video {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    position: relative;
+}
+
+.close{
+    font-size: 40px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: rgb(248, 248, 248);
+    background-color: rgb(24, 24, 24);
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* PRICE OF THE COURSE */
+.details__price {
+    width: 80%;
+    height: 55px;
+    color: var(--greenWhatsapp);
+    align-self: center;
+    display: flex;
+    align-items: center;
+}
+.details__price h2{
+    font-size: 30px;
+}
+
+
+/* DETAILS OF WHAT THE COURSE INCLUDES */
+.details__includes {
+    width: 80%;
+    height: 200px;
+    font-size: 20px;
+    color: gray;
+    align-self: center;
+    justify-content: space-evenly;
+}
+.details__includes p {
+    font-size: 25px;
+    font-weight: 600;
+    padding: 0 0 10px 0;
+    color: black;
+}
+.details__includes ul{
+    list-style: none;
+}
+.details__includes ul li{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    padding: 4px 0;
+}
+.details__includes ul li i {
+    font-size: 22px;
+    margin-right: 5px;
+    color: black;
+}
+
+/* BUTTONS THE PURCHASE AND INFORMATION */
+.buttons {
+    width: 100%;
+    height: 120px;
+    color: white;
+    font-size: 20px;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+}
+.buttons a {
+    width: 85%;
+    height: 50px;
+    font-weight: 500;
+    text-decoration: none;
+    gap: 8px;
+}
+.btn--linkCourse {
+    background-color: var(--redBuys);
+    margin-bottom: 10px;
+}
+.btn--walink {
+    background-color: var(--greenWhatsapp);
+}
+
+/* JAVASCRIPT CLICK */
+.details_presentation{
+    position: fixed;
+    display: none;
+}
+
+
+/* -------------------  MODE DESKTOP ------------------- */
+@media screen and (min-width: 500px) {
+    body {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .background {
+        position: absolute;
+        z-index: -1;
+
+    }
+
+    .container {
+        width: 400px;
+        height: 700px;
+        background: var(--transparent);
+        border-radius: 10px;
+        z-index: 1;
+    }
+
+    .perfil {
+        background-color: transparent;
+        width: 100%;
+    }
+    .section-1 .image-cover {
+        border-radius: 5px 5px 0 0;
+    }
+
+    .details {
+        width: 400px;
+        height: 640px;
+    }
+}
