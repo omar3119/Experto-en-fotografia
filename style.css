@@ -1,7 +1,8 @@
 :root {
     --redDark: #D2003c;
     --greenDark: #089108;
-    --blackTransparent: rgba(0, 0, 0, 0.39);
+    --blackTransparent: rgba(0, 0, 0, 0.61);
+    --backgroundElement: rgba(0, 0, 0, 0.397);
 }
 
 * {
@@ -57,7 +58,7 @@ body {
     padding: 15px;
     text-align: justify;
     border-radius: 5px;
-    background: var(--blackTransparent);
+    background: var(--backgroundElement);
     line-height: 22px;
 }
 
@@ -84,7 +85,7 @@ body {
 }
 
 .course__1--background {
-    background: var(--blackTransparent);
+    background: var(--backgroundElement);
     margin-bottom: 50px;
 
 }
