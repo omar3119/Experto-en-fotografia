@@ -1,239 +1,176 @@
 :root {
-    --transparent: rgba(0, 0, 0, 0.274);
-    --dark: rgba(0, 0, 0, 0.808);
-    --redBuys: #D2003C;
-    --greenWhatsapp: rgb(8, 145, 8);
-    --transparent1: rgba(29, 29, 29, 0.699);
+    --redDark: #D2003c;
+    --greenDark: #089108;
+    --blackTransparent: rgba(0, 0, 0, 0.39);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
     width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-
-/* BACKGROUNND IMAGE AND COLOR */
-.background--img,
-.background--color {
+.backgroundimg_container {
     width: 100%;
-    height: 100vh;
-    position: absolute;
-}
-
-.background--img {
-    object-fit: cover;
-    z-index: -2;
-}
-
-.background--color {
-    background: var(--transparent);
-    z-index: -1;
-}
-
-
-
-/* COURSE NAME AND IMAGE-PERFILE AND DESCRIPTION---------------1*/
-.container,
-.perfil,
-.perfil__description .perfil__head {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    background: url("image/adam-birkett-8nebi46-k_M-unsplash.jpg") no-repeat center center;
+    background-size: cover;
+} 
 
 .container {
     width: 100%;
-    height: 100vh;
-    background: var(--transparent);
-    color: white;
-    overflow-y: scroll;
-
-}
-
-.perfil {
-    width: 100%;
-    margin: 15px 0;
-}
-
-.perfil .perfil__description {
-    width: 85%;
-}
-
-/* IMG PERFIL----------*/
-.perfil__description .perfil__image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
-
-.perfil__description .perfil__head {
-    color: white;
-    font-size: 20px;
-    font-family: 'Pathway Extreme', sans-serif;
-    margin-bottom: 20px;
-}
-
-.perfil__description .perfil__paragraph {
-    width: 100%;
-    line-height: 20px;
-    text-align: justify;
-    font-size: 15px;
-    color: white;
-    padding: 20px 15px;
-    border-radius: 5px;
-    background: var(--transparent1);
-}
-
-
-
-/* PRESENTATION COURSE */
- 
-.details {
-    width: 100%;
-    font-family: 'Roboto', sans-serif;
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
     align-items: center;
+    gap: 20px;
+    color: white;
 }
-.details h2{
-margin-bottom: 20px;
 
+.container--principal {
+    background: var(--blackTransparent);
+    backdrop-filter: blur(5px);
 }
-.course1{
+
+/* PERFIL-----------CONTAINER > PERFIL 1 */
+.container .perfil {
     width: 85%;
-    display: flex;
-    flex-direction: column;
-    border-radius: 15px;
-    margin-bottom: 30px;
-    background: var(--transparent1);
-
-}
-/* img OF THE COURSE */
-.details__img{
-    width: 80%;
-    align-self: center;
-    display: flex;
-    justify-content: center;
     margin-top: 30px;
 }
-.details__img img{
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    object-position: 0 -50px;
-    border-radius: 5px;
 
+.perfil .img__perfil {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
 }
 
+.perfil h1 {
+    font-size: 25px;
+    font-family: 'Play', sans-serif;
+}
 
-/* PRICE OF THE COURSE */
-.details__title {
-    width: 90%;
-    font-size: 15px;
-    align-self: center;
-    margin: 15px 0 10px 0;
+.perfil p {
+    width: 100%;
+    padding: 15px;
+    text-align: justify;
+    border-radius: 5px;
+    background: var(--blackTransparent);
+    line-height: 22px;
+}
+
+/* TITLE__INTEREST-----------CONTAINER > TITLE__INTEREST 2 */
+.container .title__interest {
+    width: 80%;
     text-align: center;
 }
 
-
-/* DETAILS OF WHAT THE COURSE INCLUDES */
-.details__includes {
-    align-self: center;
-    width: 80%;
-    color: rgb(255, 255, 255);
-    justify-content: space-evenly;
-
-
-}
-.details__includes p {
-    width: 100%;
-    text-align: justify;
-    font-size: 16px;
-    padding: 0 0 10px 0;
-
-}
-
-/* BUTTONS THE PURCHASE AND INFORMATION */
-.buttons {
-    width: 100%;
-    height: 150px;
-    color: white;
-    font-size: 20px;
-    align-self: center;
+.courses{
     display: flex;
-    flex-wrap: wrap;
-    place-content: center;
-    margin-bottom: 15px;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
 }
-.buttons a {
+
+/* COURSE__1----------CONTAINER > COURSE__1 3 */
+.container .course__1 {
     width: 85%;
-    height: 50px;
-    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.course__1--background {
+    background: var(--blackTransparent);
+    margin-bottom: 50px;
+
+}
+
+.course__1 .img__course {
+    width: 100%;
+    height: 330px;
+    justify-content: center;
+}
+
+.course__1 .img__course img {
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+
+}
+.image--kike{
+    object-fit: cover;
+    object-position: 0px -50px;
+}
+.course__1 .course__description h2 {
+    margin: 0 0 15px 0;
+    text-align: center;
+}
+
+.course__1 .course__description p {
+    text-align: justify;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: scalebtn 2s infinite;
+    animation-direction: alternate;
+}
+@keyframes scalebtn{
+    to{
+        transform: scale(1.03);
+    }
+}
+.course__1 .buttons a {
+    color: white;
+    width: 90%;
+    height: 45px;
+    font-size: 18px;
     text-decoration: none;
     border-radius: 5px;
-    gap: 8px;
-}
-.btn--linkCourse {
-    background-color: var(--redBuys);
-    margin-bottom: 10px;
-}
-.btn--walink {
-    background-color: var(--greenWhatsapp);
-    font-size: 16px;
+    background: var(--redDark);
+    margin-top: 15px;
 }
 
+.buttons a i {
+    font-size: 20px;
+    margin-right: 5px;
+}
 
-/* -------------------  MODE DESKTOP ------------------- */
+.course__1 .buttons .buttons--walink {
+    background: var(--greenDark);
+    margin-bottom: 30px;
+}
+.course__1 .buttons .buttons--walink:hover {
+    animation: none;
+    
+}
+
 @media screen and (min-width: 500px) {
-    body {
-        height: 100vh;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .background {
-        position: absolute;
-        z-index: -1;
-
+    .backgroundimg_container {
+        width: 400px;
+        height: 750px;
+        border-radius: 10px;
     }
 
     .container {
         width: 400px;
-        height: 700px;
-        background: var(--transparent);
+        height: 750px;
         border-radius: 10px;
-        z-index: 1;
     }
-
-    .perfil {
-        background-color: transparent;
-        width: 100%;
-    }
-    .section-1 .image-cover {
-        border-radius: 5px 5px 0 0;
-    }
-
-    .details {
-        width: 400px;
-        height: 640px;
-    }
-    .btn--walink {
-        background-color: var(--greenWhatsapp);
-        font-size: 20px;
-    }
-    
-}
+    .container--principal {
+       overflow-y: scroll;
+ }
+} 
