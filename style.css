@@ -63,11 +63,13 @@ body {
 
 }
 .icons a{
-    background: rgb(255, 255, 255);
+    text-decoration: none;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    outline: none;
 }
 
 .perfil p {
@@ -124,7 +126,7 @@ body {
 .course__1 .course__description h2 {
     margin: 0 0 15px 0;
     text-align: center;
-    font-size: 21px;
+    font-size: 20px;
 
 }
 
